@@ -1,0 +1,703 @@
+<!doctype html>
+<html lang="pt-BR" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Letícia França</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Syne:wght@400;500;600;700;800&family=JetBrains+Mono:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+  </head>
+  <body>
+    <!-- Particulas do fundo que se mexem -->
+    <canvas id="particles-canvas" aria-hidden="true"></canvas>
+
+    <!-- Cursor personalizado -->
+    <div id="cursor-dot"></div>
+    <div id="cursor-ring"></div>
+
+    <!-- Menu -->
+    <nav id="navbar">
+      <a href="#hero" class="nav-logo">dev<span>.</span>portfolio</a>
+      <ul class="nav-links">
+        <li><a href="#about">Sobre</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projetos</a></li>
+        <li><a href="#experience">Experiência</a></li>
+        <li><a href="#contact">Contato</a></li>
+      </ul>
+      <a href="#contact" class="nav-cta">Fale comigo</a>
+      <button
+        id="theme-toggle"
+        aria-label="Alternar tema"
+        title="Alternar tema claro/escuro"
+      >
+        <span class="icon-sun">☀️</span>
+        <span class="icon-moon">🌙</span>
+        <span class="toggle-thumb"></span>
+      </button>
+    </nav>
+
+    <!-- Hero background blobs -->
+    <div aria-hidden="true" class="bg-blob">
+      <div class="green-blob"></div>
+      <div class="lilac-blob"></div>
+      <div class="green-blob-small"></div>
+    </div>
+
+    <!-- Hero -->
+    <section id="hero">
+      <div class="hero-left">
+        <div class="hero-badge">
+          <span></span>
+          Disponível para novos projetos
+        </div>
+        <h1 class="hero-h1" id="hero-title">
+          Full-Stack<br/>
+          <span class="line-accent">Developer</span>
+          <span class="line-green" id="typewriter-target"></span
+          ><span class="typewriter-cursor" id="tw-cursor"></span>
+        </h1>
+        <p class="hero-desc">
+          Curiosa por natureza, desenvolvedora por escolha. Transformo ideias em software enquanto continuo aprendendo, construindo e explorando novas possibilidades através da tecnologia.
+        </p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn-primary">
+            Ver projetos <span class="arrow">↗</span>
+          </a>
+          <a href="#contact" class="btn-ghost">Entrar em contato</a>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <div class="hero-card" style="animation: float 5s ease-in-out infinite">
+          <div class="hero-avatar"></div>
+          <div class="hero-card-name">Letícia França</div>
+          <div class="hero-card-role">// full-stack developer</div>
+          <div class="hero-stats">
+            <div
+              class="stat-item"
+              style="
+                background: var(--green-pale);
+                border-color: rgba(62, 207, 142, 0.2);
+              "
+            >
+              <div
+                class="stat-num"
+                style="color: var(--green-dim)"
+                data-target="3"
+                data-suffix="+"
+              >
+                3<span style="color: var(--green)">+</span>
+              </div>
+              <div class="stat-label">Anos de xp</div>
+            </div>
+            <div
+              class="stat-item"
+              style="
+                background: var(--lilac-pale);
+                border-color: rgba(167, 139, 250, 0.2);
+              "
+            >
+              <div
+                class="stat-num"
+                style="color: var(--lilac-dim)"
+                data-target="1"
+                data-suffix="+"
+              >
+                1<span style="color: var(--lilac)">+</span>
+              </div>
+              <div class="stat-label">Projetos</div>
+            </div>
+            <div
+              class="stat-item"
+              style="
+                background: var(--lilac-pale);
+                border-color: rgba(167, 139, 250, 0.2);
+              "
+            >
+              <div
+                class="stat-num"
+                style="color: var(--lilac-dim)"
+                data-target="5"
+                data-suffix="+"
+              >
+                5<span style="color: var(--lilac)">+</span>
+              </div>
+              <div class="stat-label">stacks</div>
+            </div>
+            <div
+              class="stat-item"
+              style="
+                background: var(--green-pale);
+                border-color: rgba(62, 207, 142, 0.2);
+              "
+            >
+              <div class="stat-num" style="color: var(--green-dim)">∞</div>
+              <div class="stat-label">cafézinhos</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Faixa com stacks -->
+    <div class="marquee-wrapper">
+      <div class="marquee-track">
+        <div class="marquee-item">React</div>
+        <div class="marquee-item">Node.js</div>
+        <div class="marquee-item">TypeScript</div>
+        <div class="marquee-item">PostgreSQL</div>
+        <div class="marquee-item">MySQL</div>
+        <div class="marquee-item">SQLServer</div>
+        <div class="marquee-item">Docker</div>
+        <div class="marquee-item">AWS</div>
+        <div class="marquee-item">PHP</div>
+        <div class="marquee-item">CakePHP</div>
+        <div class="marquee-item">Bootstrap</div>
+        <div class="marquee-item">Tailwind</div>
+        <div class="marquee-item">CI/CD</div>
+        <div class="marquee-item">C#</div>
+        <div class="marquee-item">ASP.NET</div>
+        <div class="marquee-item">React</div>
+        <div class="marquee-item">Node.js</div>
+        <div class="marquee-item">TypeScript</div>
+        <div class="marquee-item">PostgreSQL</div>
+        <div class="marquee-item">MySQL</div>
+        <div class="marquee-item">SQLServer</div>
+        <div class="marquee-item">Docker</div>
+        <div class="marquee-item">AWS</div>
+        <div class="marquee-item">PHP</div>
+        <div class="marquee-item">CakePHP</div>
+        <div class="marquee-item">Bootstrap</div>
+        <div class="marquee-item">TailwindCSS</div>
+        <div class="marquee-item">CI/CD</div>
+        <div class="marquee-item">C#</div>
+        <div class="marquee-item">ASP.NET</div>
+      </div>
+    </div>
+
+    <!-- Barra de Divisão -->
+    <div
+      aria-hidden="true"
+      style="
+        height: 3px;
+        background: linear-gradient(
+          to right,
+          var(--green),
+          var(--lilac),
+          var(--green)
+        );
+        opacity: 0.35;
+      "
+    ></div>
+
+    <!--Sobre Mim -->
+    <section id="about" style="position: relative; overflow: hidden">
+      <div class="about-text">
+        <div class="section-label reveal">sobre mim</div>
+        <div style="position: relative">
+          <h2 class="section-title reveal reveal-delay-1">
+            Código limpo<br /><em class="underline-draw">e propósito claro.</em>
+          </h2>
+          <span class="section-watermark reveal" aria-hidden="true">01</span>
+        </div>
+        <p class="about-body reveal reveal-delay-2">
+          Sou uma desenvolvedora <strong>full-stack</strong> apaixonada por construir produtos completos — desde interfaces <span class="about-highlight">intuitivas</span> e responsivas até <span class="about-highlight">APIS Rest</span>robustas e escaláveis.
+        </p>
+        <p class="about-body reveal reveal-delay-3">
+          Tenho uma visão sistêmica do desenvolvimento: entendo que código bom é
+          aquele que <strong>resolve o problema certo</strong>, é fácil de
+          manter e escala conforme o negócio cresce.
+        </p>
+      </div>
+
+      <div class="about-aside">
+        <div class="about-values reveal stagger-children">
+          <div class="value-card" style="border-left: 3px solid var(--green)">
+            <div
+              class="value-icon"
+              style="
+                background: var(--green-pale);
+                border-radius: 0.6rem;
+                padding: 0.4rem;
+                width: 2.4rem;
+                height: 2.4rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+              "
+            >
+              <i class="fa-solid fa-laptop-code"></i>
+            </div>
+            <div>
+              <div class="value-title">Construindo Interfaces</div>
+              <div class="value-desc">
+                Transformo ideias em experiências digitais intuitivas, acessíveis e responsivas.
+              </div>
+            </div>
+          </div>
+          <div class="value-card" style="border-left: 3px solid var(--lilac)">
+            <div
+              class="value-icon"
+              style="
+                background: var(--lilac-pale);
+                border-radius: 0.6rem;
+                padding: 0.4rem;
+                width: 2.4rem;
+                height: 2.4rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+              "
+            >
+              <i class="fa-solid fa-diagram-project"></i>
+            </div>
+            <div>
+              <div class="value-title">Arquitetando Soluções</div>
+              <div class="value-desc">
+                Desenvolvo APIs, regras de negócio e integrações entre sistemas, estruturando aplicações de forma organizada, segura e preparada para crescer.
+              </div>
+            </div>
+          </div>
+          <div class="value-card" style="border-left: 3px solid var(--green)">
+            <div
+              class="value-icon"
+              style="
+                background: var(--green-pale);
+                border-radius: 0.6rem;
+                padding: 0.4rem;
+                width: 2.4rem;
+                height: 2.4rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+              "
+            >
+              <i class="fa-solid fa-seedling"></i>
+            </div>
+            <div>
+              <div class="value-title">Sempre Aprendendo</div>
+              <div class="value-desc">
+                Gosto de explorar novas tecnologias, aprofundar conhecimentos em arquitetura de software e transformar cada projeto em uma oportunidade de aprender algo novo.
+              </div>
+            </div>
+          </div>
+          <div class="value-card" style="border-left: 3px solid var(--lilac)">
+            <div
+              class="value-icon"
+              style="
+                background: var(--lilac-pale);
+                border-radius: 0.6rem;
+                padding: 0.4rem;
+                width: 2.4rem;
+                height: 2.4rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+              "
+            >
+              <i class="fa-solid fa-rocket"></i>
+            </div>
+            <div>
+              <div class="value-title">Entrega Contínua</div>
+              <div class="value-desc">
+                CI/CD, testes automatizados e deploys que não tiram o sono de
+                ninguém
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <div id="skills">
+      <div class="inner">
+        <div class="section-label reveal">habilidades</div>
+        <div style="position: relative">
+        <h2 class="section-title reveal reveal-delay-1">
+          Stacks que fazem parte<br /><em>da minha jornada.</em>
+        </h2>
+          <span
+            class="section-watermark reveal"
+            aria-hidden="true"
+            style="-webkit-text-stroke-color: rgba(62, 207, 142, 0.08)"
+            >02</span
+          >
+        </div>
+
+        <div class="skills-categories reveal stagger-children reveal-delay-2">
+          <div
+            class="skill-category"
+            style="border-top: 3px solid var(--green)"
+          >
+            <div
+              class="cat-icon"
+              style="
+                background: rgba(62, 207, 142, 0.12);
+                border-radius: 0.6rem;
+                padding: 0.5rem;
+                display: inline-block;
+              "
+            >
+              <i class="fa-solid fa-laptop-code"></i>
+            </div>
+            <div class="cat-title" style="color: var(--green)">Front-End</div>
+            <div class="cat-tags">
+              <span class="cat-tag">React</span>
+              <span class="cat-tag">Angular</span>
+              <span class="cat-tag">TypeScript</span>
+              <span class="cat-tag">TailwindCSS</span>
+              <span class="cat-tag">Bootstrap</span>
+              <span class="cat-tag">HTML/CSS</span>
+            </div>
+          </div>
+          <div
+            class="skill-category"
+            style="border-top: 3px solid var(--lilac)"
+          >
+            <div
+              class="cat-icon"
+              style="
+                background: rgba(167, 139, 250, 0.12);
+                border-radius: 0.6rem;
+                padding: 0.5rem;
+                display: inline-block;
+              "
+            >
+              <i class="fa-solid fa-server"></i>
+            </div>
+            <div class="cat-title">Back-End</div>
+            <div class="cat-tags">
+              <span class="cat-tag">REST APIs</span>
+              <span class="cat-tag">Node.js</span>
+              <span class="cat-tag">Express</span>
+              <span class="cat-tag">Fastify</span>
+              <span class="cat-tag">PostgreSQL</span>
+              <span class="cat-tag">SQLServer</span>
+              <span class="cat-tag">MySQL</span>
+              <span class="cat-tag">PHP</span>
+              <span class="cat-tag">CakePHP</span>
+              <span class="cat-tag">C#</span>
+              <span class="cat-tag">ASP.NET</span>
+            </div>
+          </div>
+          <div
+            class="skill-category"
+            style="border-top: 3px solid var(--green)"
+          >
+            <div
+              class="cat-icon"
+              style="
+                background: rgba(62, 207, 142, 0.12);
+                border-radius: 0.6rem;
+                padding: 0.5rem;
+                display: inline-block;
+              "
+            >
+              <i class="fa-solid fa-cloud"></i>
+            </div>
+            <div class="cat-title" style="color: var(--green)">
+              Infra &amp; DevOps
+            </div>
+            <div class="cat-tags">
+              <span class="cat-tag">Docker</span>
+              <span class="cat-tag">AWS</span>
+              <span class="cat-tag">Vercel</span>
+              <span class="cat-tag">GitHub Actions</span>
+              <span class="cat-tag">Linux</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Projetos -->
+    <section id="projects">
+      <div class="section-label reveal">projetos</div>
+      <div style="position: relative">
+        <h2 class="section-title reveal reveal-delay-1">
+          Coisas que construí<br /><em>com orgulho.</em>
+        </h2>
+        <span class="section-watermark reveal" aria-hidden="true">03</span>
+      </div>
+
+      <div class="projects-grid">
+        <p>Página em construção</p>
+      </div>
+    </section>
+
+    <!-- Experiência -->
+    <section id="experience" style="position: relative; overflow: hidden">
+      <div
+        aria-hidden="true"
+        style="
+          position: absolute;
+          top: -100px;
+          right: -100px;
+          width: 350px;
+          height: 350px;
+          border-radius: 50%;
+          background: radial-gradient(
+            circle,
+            rgba(167, 139, 250, 0.07) 0%,
+            transparent 65%
+          );
+          pointer-events: none;
+        "
+      ></div>
+      <div class="section-label reveal">experiência</div>
+      <div style="position: relative">
+        <h2 class="section-title reveal reveal-delay-1">
+          Onde já<br /><em>deixei marca.</em>
+        </h2>
+        <span class="section-watermark reveal" aria-hidden="true">04</span>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-item reveal-left">
+          <div class="timeline-dot" style="border-color: var(--green)"></div>
+          <div class="timeline-date">2026 — <span>Presente</span></div>
+          <div class="timeline-header">
+            <div class="timeline-role">Desenvolvedora Full-Stack</div>
+            <div
+              class="timeline-company"
+              style="
+                background: var(--green-pale);
+                color: var(--green-dim);
+                border: 1px solid rgba(62, 207, 142, 0.2);
+              "
+            >
+              South Cargo
+            </div>
+          </div>
+          <p class="timeline-desc">
+            Desenvolvimento de APIs Rest utilizando Node.js e Typescript. Manutenção de site institucional com wordpress e php. Integrações e automações utilizando SkyOne, Power Automate e Power Apps. Manipulação de banco de dados SQL Server.
+          </p>
+          <div class="timeline-chips">
+            <span
+              class="timeline-chip"
+              style="
+                background: var(--green-pale);
+                border-color: rgba(62, 207, 142, 0.2);
+                color: var(--green-dim);
+              "
+              >Node.js</span
+            >
+            <span
+              class="timeline-chip"
+              style="
+                background: var(--green-pale);
+                border-color: rgba(62, 207, 142, 0.2);
+                color: var(--green-dim);
+              "
+              >Express</span
+            >
+            <span class="timeline-chip">JavaScript</span>
+            <span class="timeline-chip">SQLServer</span>
+            <span class="timeline-chip">SkyOne</span>
+            <span class="timeline-chip">Power Apps</span>
+            <span
+              class="timeline-chip"
+              style="
+                background: var(--lilac-pale);
+                border-color: rgba(167, 139, 250, 0.2);
+                color: var(--lilac-dim);
+              "
+              >Power Automate</span
+            >
+          </div>
+        </div>
+
+        <div class="timeline-item reveal-left reveal-delay-1">
+          <div class="timeline-dot" style="border-color: var(--lilac)"></div>
+          <div class="timeline-date">2024 — 2026</div>
+          <div class="timeline-header">
+            <div class="timeline-role">Desenvolvedora Full-Stack</div>
+            <div class="timeline-company">SectoTech</div>
+          </div>
+          <p class="timeline-desc">
+            Desenvolvimento de novas funcionalidades e manutenção do sistema existente. Participação no desenvolvimento do módulo financeiro do sistema. Colaboração com a equipe para otimizar a performance do sistema e garantir a escalabilidade das soluções implementadas. Atuação em APIs REST, integrações com serviços de terceiros e implementação de testes automatizados para garantir a qualidade do código entregue.
+          </p>
+          <div class="timeline-chips">
+            <span
+              class="timeline-chip"
+              style="
+                background: var(--lilac-pale);
+                border-color: rgba(167, 139, 250, 0.2);
+                color: var(--lilac-dim);
+              "
+              >PHP</span
+            >
+            <span
+              class="timeline-chip"
+              style="
+                background: var(--lilac-pale);
+                border-color: rgba(167, 139, 250, 0.2);
+                color: var(--lilac-dim);
+              "
+              >CakePHP</span
+            >
+            <span class="timeline-chip">MySQL</span>
+            <span class="timeline-chip">JavaScript</span>
+            <span class="timeline-chip">Bootstrap</span>
+            <span class="timeline-chip">Git</span>
+            <span class="timeline-chip">GitLab</span>
+            <span class="timeline-chip">AWS</span>
+            <span class="timeline-chip">Docker</span>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal-left reveal-delay-2">
+          <div class="timeline-dot" style="border-color: var(--green)"></div>
+          <div class="timeline-date">2023 — 2024</div>
+          <div class="timeline-header">
+            <div class="timeline-role">Estagiária em Desenvolvimento Full-Stack</div>
+            <div class="timeline-company">Concept Softwares</div>
+          </div>
+          <p class="timeline-desc">
+            Levantamento de regras de negócio, desenvolvimento e manutenção de sistemas web para uso interno da empresa, utilizando Angular no front-end e C# com ASP.NET no back-end. Colaborei com a equipe para implementar novas funcionalidades E corrigir bugs. Tive a oportunidade de aprender sobre o ciclo completo de desenvolvimento de software, desde a análise de requisitos até a entrega final, e contribuir para projetos que impactaram diretamente os processos internos da empresa.
+          </p>
+          <div class="timeline-chips">
+            <span
+              class="timeline-chip"
+              style="
+                background: var(--green-pale);
+                border-color: rgba(62, 207, 142, 0.2);
+                color: var(--green-dim);
+              "
+              >Angular</span
+            >
+            <span class="timeline-chip">JavaScript</span>
+            <span class="timeline-chip">Bootstrap</span>
+            <span class="timeline-chip">C#</span>
+            <span class="timeline-chip">ASP.NET</span>
+            <span class="timeline-chip">Git</span>
+            <span class="timeline-chip">GitHub</span>
+            <span class="timeline-chip">SQL Server</span>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal-left reveal-delay-1">
+          <div class="timeline-dot" style="border-color: var(--lilac)"></div>
+          <div class="timeline-date">2021 — 2023</div>
+          <div class="timeline-header">
+            <div class="timeline-role">Product Owner/QA</div>
+            <div class="timeline-company">SectoTech</div>
+          </div>
+          <p class="timeline-desc">
+            Participação no processo de idealização de produtos e features (jurídico e financeiro), atuando na ponte entre clientes e time de desenvolvimento. Escrevi histórias de usuário, conduzi sessões de feedback e ajudei a priorizar o backlog com foco em valor para o usuário. Também participei da execução de testes manuais para garantir a qualidade das entregas e satisfação dos clientes.
+          </p>
+          <div class="timeline-chips">
+            <span
+              class="timeline-chip"
+              style="
+                background: var(--lilac-pale);
+                border-color: rgba(167, 139, 250, 0.2);
+                color: var(--lilac-dim);
+              "
+              >Git</span
+            >
+            <span
+              class="timeline-chip"
+              style="
+                background: var(--lilac-pale);
+                border-color: rgba(167, 139, 250, 0.2);
+                color: var(--lilac-dim);
+              "
+              >GitLab</span
+            >
+            <span class="timeline-chip">Kanban</span>
+            <span class="timeline-chip">Scrum</span>
+            <span
+              class="timeline-chip"
+              style="
+                background: var(--green-pale);
+                border-color: rgba(62, 207, 142, 0.2);
+                color: var(--green-dim);
+              "
+              >MySQL</span
+            >
+            <span
+              class="timeline-chip"
+              style="
+                background: var(--lilac-pale);
+                border-color: rgba(167, 139, 250, 0.2);
+                color: var(--lilac-dim);
+              "
+              >Figma</span
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contato -->
+    <div id="contact">
+      <div class="inner">
+        <div>
+          <div class="section-label reveal">contato</div>
+          <h2 class="section-title reveal reveal-delay-1">
+            Vamos construir<br /><em>algo juntos?</em>
+          </h2>
+          <p class="contact-sub reveal reveal-delay-2">
+            Se você tem um projeto, uma ideia, ou só quer trocar uma ideia sobre
+            tecnologia — minha caixa de entrada está aberta.
+          </p>
+          <a
+            href="mailto:lety.adf@email.com"
+            class="contact-cta reveal reveal-delay-3"
+          >
+            Enviar mensagem <span class="arrow">↗</span>
+          </a>
+        </div>
+
+        <div class="contact-links reveal reveal-delay-2">
+          <a href="mailto:lety.adf@email.com" class="contact-link">
+            <div class="contact-link-icon green">
+              <i class="fa-solid fa-envelope"></i>
+            </div>
+            <div class="contact-link-text">
+              <div class="contact-link-label">Email</div>
+              <div class="contact-link-value">lety.adf@email.com</div>
+            </div>
+            <div class="contact-link-arrow">↗</div>
+          </a>
+          <a href="https://github.com/" target="_blank" class="contact-link">
+            <div class="contact-link-icon ink">⌥</div>
+            <div class="contact-link-text">
+              <div class="contact-link-label">GitHub</div>
+              <div class="contact-link-value">github.com/lettyfranca</div>
+            </div>
+            <div class="contact-link-arrow">↗</div>
+          </a>
+          <a href="https://linkedin.com/" target="_blank" class="contact-link">
+            <div class="contact-link-icon lilac">in</div>
+            <div class="contact-link-text">
+              <div class="contact-link-label">LinkedIn</div>
+              <div class="contact-link-value">linkedin.com/in/lettyfranca</div>
+            </div>
+            <div class="contact-link-arrow">↗</div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="footer-inner">
+        <div class="footer-copy">
+          © 2026 <span>Letícia França</span> — Todos os direitos reservados
+        </div>
+        <div class="footer-built">Feito com HTML, CSS &amp; JS</div>
+      </div>
+    </footer>
+    
+    <script src="script.js"></script>
+  </body>
+</html>
